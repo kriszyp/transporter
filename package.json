@@ -1,0 +1,13 @@
+{
+	"name": "transporter",
+	"author": "Kris Zyp",
+	"dependencies": [],
+	"contributors": [],
+	"keywords": [
+		"module",
+		"transport"
+	],
+	"githubName": "transporter",
+	"type": "zip",
+	"location": "http://github.com/kriszyp/transporter/zipball/master"
+}
