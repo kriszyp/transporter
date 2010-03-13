@@ -1,4 +1,4 @@
-Transporter is JSGI application that serves modules to the browser with dependencies 
+Transporter is a JSGI appliance that serves modules to the browser with dependencies 
 included and packaged in the CommonJS module transport format:
 
 [http://wiki.commonjs.org/wiki/Modules/Transport/C](http://wiki.commonjs.org/wiki/Modules/Transport/C)
