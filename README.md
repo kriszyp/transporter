@@ -1,7 +1,7 @@
 Transporter is JSGI application that serves modules to the browser with dependencies 
 included and packaged in the CommonJS module transport format:
 
-[[http://wiki.commonjs.org/wiki/Modules/Transport/C]]
+[http://wiki.commonjs.org/wiki/Modules/Transport/C](http://wiki.commonjs.org/wiki/Modules/Transport/C)
 
 This format permits asynchronous loading of modules and combining multiple modules 
 (modules with their dependencies) into single responses. Transporter should work
@@ -9,7 +9,7 @@ with any client side module loader that supports the CommonJS module transport
 format. This has been primarily tested with RequireJS (and require.js from this project
 is included):   
 
-[[http://github.com/jrburke/requirejs]]
+[http://github.com/jrburke/requirejs](http://github.com/jrburke/requirejs)
 
 To use transporter, include the appliance in your JSGI stack:
 
