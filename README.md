@@ -14,7 +14,7 @@ is included):
 To use transporter, include the appliance in your JSGI stack:
 
     jackconfig.js:
-    var Transporter = require("transporter").Transporter;
+    var Transporter = require("jsgi/transporter").Transporter;
     exports.app = Transporter();
 
 Now you can use a client side module loader like require.js to load your modules:
@@ -72,8 +72,8 @@ The second parameter is the options, which can have two properties:
 
 For example:
 
-    require("transporter").Transporter(nextApp, {
-    	url:"/js/", 
+    require("jsgi/transporter").Transporter(nextApp, {
+    	urlPrefix:"/js/", 
     	paths: ["/some/path"]
     });
 	
