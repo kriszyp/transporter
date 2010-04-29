@@ -16,7 +16,8 @@ To use transporter, include the appliance in your JSGI stack:
     var Transporter = require("transporter").Transporter;
     exports.app = Transporter();
 
-Now you can use a client side module loader like require.js to load your modules:
+Now you can use a client side module loader like require.js to load your modules (of 
+course you should actually download require.js and transportD.js for local access):
 
     <script>
         // Configure RequireJS
@@ -101,7 +102,8 @@ For example:
 Using Yabble
 ------------
 
-Using and configuring Yabble looks something like this:
+Using and configuring Yabble looks something like this (once again, you should use your
+own copy):
 
     <script src="http://github.com/jbrantly/yabble/raw/master/lib/yabble.js"></script>
     <script>
