@@ -17,14 +17,13 @@ To use transporter, include the appliance in your JSGI stack:
     exports.app = Transporter();
 
 Now you can use a client side module loader like require.js to load your modules (of 
-course you should actually download require.js and transportD.js for local access):
+course you should actually download transportD-require.js for local access):
 
     <script>
         // Configure RequireJS
         require = {baseUrl: "lib/"};
     </script>
-    <script src="http://requirejs.org/docs/release/0.10.0/minified/require.js"></script>
-    <script src="http://github.com/jrburke/requirejs/raw/master/require/transportD.js"></script>
+    <script src="http://requirejs.org/docs/release/0.11.0/minified/transportD-require.js"></script>
     <script src="my-module.js"></script>
 
 If my-module.js requires other modules (using a require call), these modules will
@@ -36,7 +35,7 @@ requires all of them, and load it with a script tag.
 We can also specify a set of modules with the path we provide to the script tag. The
 module names can be comma separated:
 
-    <script src="require.js,module-a.js,module-b.js"></script>
+    <script src="transportD-require.js,module-a.js,module-b.js"></script>
 
 Dependency Control
 ------------------
@@ -112,3 +111,19 @@ own copy):
         require.useScriptTags();
     </script>
     <script src="lib/my-module.js"></script>
+
+Including Module Loader
+-----------------------
+
+If two requests for modules (one for the module loader and one for the actual module) 
+is too many, we can actually include require.js or yabble.js in our module. For example:
+
+    my-module.js:
+    
+    require("require"); // this will cause require.js to be included
+    require("module-a");
+    require("module-b");
+    
+Now we can simply include a single script tag, and require.js, module-a.js, and 
+module-b.js (and any dependencies they have) will be included in the response for
+my-module.js.
