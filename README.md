@@ -16,14 +16,10 @@ To use transporter, include the appliance in your JSGI stack:
     var Transporter = require("transporter").Transporter;
     exports.app = Transporter();
 
-Now you can use a client side module loader like require.js to load your modules (of 
-course you should actually download transportD-require.js for local access):
+Now you can use a client side module loader like RequireJS, Yabble, or the simple loader
+that comes with transporter to load your modules:
 
-    <script>
-        // Configure RequireJS
-        require = {baseUrl: "lib/"};
-    </script>
-    <script src="http://requirejs.org/docs/release/0.11.0/minified/transportD-require.js"></script>
+    <script src="transporter/loader.js"></script>
     <script src="my-module.js"></script>
 
 If my-module.js requires other modules (using a require call), these modules will
@@ -98,6 +94,19 @@ For example:
         paths: ["/some/path"]
     }, nextApp);
     
+Using RequireJS
+----------------
+
+You can use require.js to load your modules (of 
+course you should actually download transportD-require.js for local access):
+
+    <script>
+        // Configure RequireJS
+        require = {baseUrl: "lib/"};
+    </script>
+    <script src="http://requirejs.org/docs/release/0.11.0/minified/transportD-require.js"></script>
+    <script src="my-module.js"></script>
+
 Using Yabble
 ------------
 
