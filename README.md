@@ -19,7 +19,7 @@ To use transporter, include the appliance in your JSGI stack:
 Now you can use a client side module loader like RequireJS, Yabble, or the simple loader
 that comes with transporter to load your modules:
 
-    <script src="transporter/loader.js"></script>
+    <script src="transporter/receiver.js"></script>
     <script src="my-module.js"></script>
 
 If my-module.js requires other modules (using a require call), these modules will
