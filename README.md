@@ -13,7 +13,7 @@ format. This has been primarily tested with RequireJS and Yabble:
 
 To use transporter, include the appliance in your JSGI stack:
 
-    var Transporter = require("transporter").Transporter;
+    var Transporter = require("jsgi/transporter").Transporter;
     exports.app = Transporter();
 
 Now you can use a client side module loader like RequireJS, Yabble, or the simple loader
@@ -79,7 +79,9 @@ transporter module:
 ** DojoRequireJS - For Dojo modules with use with RequireJS
 For example:
 
-    converter: require("transporter/jsgi/transporter").CommonJSTransportC,
+    require("transporter").Transporter({
+        converter: require("transporter/jsgi/transporter").CommonJSTransportC,
+        ...
     
 * paths - The set of paths to lookup modules in. The defaults to require.paths set of 
 paths where any /engines/some-engine paths replaced with a /engines/browser path.
@@ -90,7 +92,7 @@ The second parameter is next JSGI application, so Transporter can be used as mid
 For example:
 
     require("transporter").Transporter({
-        url:"/js/", 
+        urlPrefix:"/js/", 
         paths: ["/some/path"]
     }, nextApp);
     
@@ -136,3 +138,4 @@ is too many, we can actually include require.js or yabble.js in our module. For 
 Now we can simply include a single script tag, and require.js, module-a.js, and 
 module-b.js (and any dependencies they have) will be included in the response for
 my-module.js.
+
