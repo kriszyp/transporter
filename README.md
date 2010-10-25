@@ -1,7 +1,7 @@
 Transporter is a JSGI appliance that serves modules to the browser with dependencies 
-included and packaged in the CommonJS module transport format:
+included and packaged using the CommonJS asynchronous module definition API:
 
-[http://wiki.commonjs.org/wiki/Modules/Transport/D](http://wiki.commonjs.org/wiki/Modules/Transport/D)
+[wiki.commonjs.org/wiki/Modules/AsynchronousDefinition](wiki.commonjs.org/wiki/Modules/AsynchronousDefinition)
 
 This format permits asynchronous loading of modules and combining multiple modules 
 (modules with their dependencies) into single responses. Transporter should work
