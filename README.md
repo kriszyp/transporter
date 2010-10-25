@@ -9,7 +9,7 @@ with any client side module loader that supports the CommonJS module transport
 format. This has been primarily tested with RequireJS and Yabble:   
 
 [http://github.com/jrburke/requirejs](http://github.com/jrburke/requirejs)
-[http://github.com/kriszyp/yabble](http://github.com/kriszyp/yabble) (currently the kriszyp fork is needed because of some implementation bugs in require.def handling in Yabble)
+[http://github.com/kriszyp/yabble](http://github.com/kriszyp/yabble) (currently the kriszyp fork is needed because of some implementation bugs in define handling in Yabble)
 
 To use transporter, include the appliance in your JSGI stack:
 
