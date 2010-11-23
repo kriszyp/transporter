@@ -1,20 +1,24 @@
 {
-	"name": "transporter",
-	"author": "Kris Zyp",
-	"dependencies": [],
-	"contributors": [],
-	"keywords": [
-		"module",
-		"transport"
-	],
-	"githubName": "transporter",
-	"type": "zip",
-	"location": "http://github.com/kriszyp/transporter/zipball/master",
-	"overlay": {
-		"npm": {
-			"directories": { "lib": "./lib" },
-			"main": "./lib/jsgi/transporter",
-			"version": "0.0.1"
-		}
-	}
+  "name": "transporter",
+  "author": "Kris Zyp",
+  "version": "0.2.2",
+  "keywords": [
+    "json",
+    "schema"
+  ],
+  "licenses": [
+     {
+         "type": "AFLv2.1",
+         "url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L43"
+     },
+     {
+         "type": "BSD",
+         "url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L13"
+     }
+  ],
+  "repository": {
+    "type":"git",
+    "url":"http://github.com/kriszyp/transporter"
+  },
+  "directories": { "lib": "./lib" }
 }
