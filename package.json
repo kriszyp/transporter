@@ -1,6 +1,7 @@
 {
 	"name": "transporter",
 	"author": "Kris Zyp",
+	"version": "0.0.1",
 	"dependencies": [],
 	"contributors": [],
 	"keywords": [
@@ -9,12 +10,5 @@
 	],
 	"githubName": "transporter",
 	"type": "zip",
-	"location": "http://github.com/kriszyp/transporter/zipball/master",
-	"overlay": {
-		"npm": {
-			"directories": { "lib": "./lib" },
-			"main": "./lib/jsgi/transporter",
-			"version": "0.0.1"
-		}
-	}
+	"location": "http://github.com/kriszyp/transporter/zipball/master"
 }
